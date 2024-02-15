@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css"/>
+  <title>¿Quieres ser mi san valentin?</title>
+</head>
+
+<body>
+  <div class="background-overlay"></div>
+  <div class="rosa">
+    <div class="contenedor">
+      <br />
+      <h1 id="mensaje">¿Syndi, Quieres ser mi san valentin?</h1>
+      <img src="/img/inicio.gif" class="imagen imagen-gif" id="imagen">
+      <h1 id="mensaje1">Vamos, respondeme!</h1>
+      <button class="boton" id="btnSi">Sí</button>
+      <button class="boton" id="btnNo">No</button>
+      <div id="botonRedireccion" ></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("btnSi").addEventListener("click", function() {
+        // Ocultar el mensaje
+        document.getElementById("mensaje1").style.display = "none";
+
+        // Crear el botón de redirección
+        let botonRedireccion = document.createElement('button');
+        botonRedireccion.textContent = 'click aqui';
+        botonRedireccion.style.backgroundColor = '#cc0066'; // Fondo rosado
+        botonRedireccion.style.color = 'white'; // Texto blanco
+        botonRedireccion.style.borderRadius = '15px'; // Radio de borde 15px
+        botonRedireccion.addEventListener('click', function() {
+            // Redirigir a otra página
+            window.location.href = './flores/index.html';
+        });
+
+        // Agregar el botón de redirección al contenedor
+        document.getElementById("botonRedireccion").appendChild(botonRedireccion);
+    });
+</script>
+
+  <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script language="javascript" type="text/javascript" src="./js/main.js"> </script>
+</body>
+
+</html>
