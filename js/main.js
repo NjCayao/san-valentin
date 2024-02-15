@@ -12,18 +12,23 @@ const imagenes = [
     "7.gif",
     "8.gif"
 ];
+
+
+
+// Variable para mantener el índice de la imagen actual
 let index = -1;
+
 
 btnSi.addEventListener('click', function () {
     Swal.fire({
         title: '¡Sabia que dirías que sí!',
         text: '¡Eres mi novia ahora! 😊😘',
-        imageUrl: 'img/image_SI.gif',
+        imageUrl: './img/image_SI.gif',
         confirmButtonText: 'Cerrar'
     }).then((result) => {
         felicidades();
         clearInterval(interval);
-        imagen.src = "/img/image_OK.gif";
+        imagen.src = "./img/image_OK.gif";
         btnSi.style.display = 'none';
         btnNo.style.display = 'none';
         mensaje.textContent = '❤ ¡Eres la casualidad más bonita que me ha pasado! 🥰❤';
@@ -32,36 +37,7 @@ btnSi.addEventListener('click', function () {
 });
 
 
-// btnSi.addEventListener('click', function () {
-//     Swal.fire({
-//         title: '¡Sabía que dirías que sí!',
-//         text: '¡Eres mi novia ahora! 😊😘',
-//         imageUrl: 'img/image_SI.gif',
-//         confirmButtonText: 'Cerrar'
-//     }).then((result) => {
-//         felicidades();
-//         clearInterval(interval);
-//         imagen.src = "/img/image_OK.gif";
-//         btnSi.style.display = 'none';
-//         btnNo.style.display = 'none';
 
-        
-//         let botonRedireccion = document.createElement('button');
-//         botonRedireccion.textContent = 'Ir a otra página';
-//         botonRedireccion.addEventListener('click', function() {
-           
-//             window.location.href = './flores/index.html';
-//         });
-
-        
-//         let mensajeText = document.createElement('div');
-//         mensajeText.textContent = '❤ ¡Eres la casualidad más bonita que me ha pasado! 🥰❤';
-
-        
-//         mensaje.appendChild(mensajeText);
-//         mensaje.appendChild(botonRedireccion);
-//     });
-// });
 
 
 
@@ -86,7 +62,7 @@ const interval = setInterval(() => {
         index = 0;
     }
 
-    imagen.src = '/img/' + imagenes[index];
+    imagen.src = './img/' + imagenes[index];
 }, 3000);
 
 
