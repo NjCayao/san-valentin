@@ -62,7 +62,7 @@ const interval = setInterval(() => {
         index = 0;
     }
 
-    imagen.src = 'img/' + imagenes[index];
+    imagen.src = './img/' + imagenes[index];
 }, 3000);
 
 
